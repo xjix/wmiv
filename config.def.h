@@ -5,8 +5,8 @@ static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Noto Mono:size=11" };
-static const char dmenufont[]       = "Noto Mono:size=11";
+static const char *fonts[]          = { "Hermit:style=Light:size=11" };
+static const char dmenufont[]       = "Hermit:style=Light:size=11";
 static const char col_gray1[]       = "#182230";
 static const char col_gray2[]       = "#121a24";
 static const char col_gray3[]       = "#b8a070";
@@ -30,7 +30,8 @@ static const Rule rules[] = {
 	/*	class					instance		title				tags mask			isfloating	monitor */
 	{		"Gimp",				NULL,				NULL,				0,						1,					-1	},
 	{		"Chromium",		NULL,				NULL,				1 << 8,				0,					-1	},
-	{		"KeepassXC",	NULL,				NULL,				1 << 7,				0,					-1	},
+	{		"KeePassXC",	NULL,				NULL,				1 << 1,				0,					-1	},
+	{		"Electron",		NULL,				NULL,				1 << 4,				0,					-1	},
 };
 
 /* layout(s) */
