@@ -5,8 +5,11 @@ static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Hermit:style=Light:size=11" };
-static const char dmenufont[]       = "Hermit:style=Light:size=11";
+static const char *fonts[]          = {
+	"Hermit:style=Light:size=12",
+	"FontAwesome:size=16"
+};
+static const char dmenufont[]       = "Hermit:style=Light:size=12";
 static const char col_gray1[]       = "#182230";
 static const char col_gray2[]       = "#121a24";
 static const char col_gray3[]       = "#b8a070";
@@ -19,7 +22,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "WEB" };
+static const char *tags[] = { "", "", "3", "4", "5", "6", "", "", "" };
 static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
@@ -28,10 +31,10 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/*	class					instance		title				tags mask			isfloating	monitor */
-	{		"Gimp",				NULL,				NULL,				0,						1,					-1	},
 	{		"Chromium",		NULL,				NULL,				1 << 8,				0,					-1	},
-	{		"KeePassXC",	NULL,				NULL,				1 << 1,				0,					-1	},
-	{		"Electron",		NULL,				NULL,				1 << 4,				0,					-1	},
+	{		"Gajim",			NULL,				NULL,				1 << 6,				0,					-1	},
+	{		"keepassxc",	NULL,				NULL,				1 << 1,				0,					-1	},
+	{		"Electron",		NULL,				NULL,				1 << 0,				0,					-1	},
 };
 
 /* layout(s) */
@@ -64,7 +67,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", "-f", dmenufont, NULL };
+static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
