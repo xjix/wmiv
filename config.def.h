@@ -26,19 +26,34 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "3", "4", "5", "6", "", "", "" };
-static const char *tagsalt[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = {
+	"",	"",	"",	"",	"",	"",	"",	"",	""
+};
+static const char *tagsalt[] = {
+	"1",	"2",	"3",	"4",	"5",	"6",	"7",	"8",	"9"
+};
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/*	class					instance		title				tags mask			isfloating	monitor */
-	{		"Chromium",		NULL,				NULL,				1 << 8,				0,					-1	},
-	{		"Gajim",			NULL,				NULL,				1 << 6,				0,					-1	},
-	{		"keepassxc",	NULL,				NULL,				1 << 1,				0,					-1	},
-	{		"Electron",		NULL,				NULL,				1 << 0,				0,					-1	},
+	/* class								instance		title				tags mask			isfloating	monitor */
+	/* 1 (1 << 0) */
+	{	"Electron",						NULL,				NULL,				1 << 0,				0,					-1},
+	/* 2 (1 << 1) */
+	{	"keepassxc",					NULL,				NULL,				1 << 1,				0,					-1},
+	/* 3 (1 << 2) */
+	{	"VirtualBox Machine",	NULL,				NULL,				1 << 2,				0,					-1},
+	{	"VirtualBox Manager",	NULL,				NULL,				1 << 2,				0,					-1},
+	/* 4 (1 << 3) */
+	{	"Steam",							NULL,				NULL,				1 << 3,				0,					-1},
+	/* 5 (1 << 4) */
+	/* 6 (1 << 5) */
+	/* 7 (1 << 6) */
+	{	"Gajim",							NULL,				NULL,				1 << 6,				0,					-1},
+	/* 9 (1 << 8) */
+	{	"Chromium",						NULL,				NULL,				1 << 8,				0,					-1},
 };
 
 /* layout(s) */
@@ -53,7 +68,7 @@ static const Layout layouts[] = {
  	{		"[@]",		spiral	},
 	{		"[]=",		tile		},
 	{		"[M]",		monocle	},
- 	{		"[\\]",		dwindle	},
+	/* {		"[\\]",		dwindle	}, */
 	{		"><>",		NULL		}, /* no layout function means floating behavior */
 };
 
