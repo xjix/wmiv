@@ -47,8 +47,9 @@ static const Rule rules[] = {
 	{	"VirtualBox Machine",	NULL,				NULL,				1 << 2,				0,					-1},
 	{	"VirtualBox Manager",	NULL,				NULL,				1 << 2,				0,					-1},
 	/* 4 (1 << 3) */
-	{	"Steam",							NULL,				NULL,				1 << 3,				0,					-1},
+	{	"Mumble",							NULL,				NULL,				1 << 3,				0,					-1},
 	/* 5 (1 << 4) */
+	{	"Steam",							NULL,				NULL,				1 << 4,				0,					-1},
 	/* 6 (1 << 5) */
 	/* 7 (1 << 6) */
 	{	"Gajim",							NULL,				NULL,				1 << 6,				0,					-1},
