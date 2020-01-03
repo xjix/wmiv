@@ -27,10 +27,10 @@ static const char *colors[][3]      = {
 
 /* tagging */
 static const char *tags[] = {
-	"",	"",	"",	"",	"",	"",	"",	"",	""
+	"", "", "", "", "", "", "", "", ""
 };
 static const char *tagsalt[] = {
-	"1",	"2",	"3",	"4",	"5",	"6",	"7",	"8",	"9"
+	"1", "2", "3", "4", "5", "6", "7", "8", "9"
 };
 
 static const Rule rules[] = {
@@ -51,6 +51,7 @@ static const Rule rules[] = {
 	/* 5 (1 << 4) */
 	{	"Steam",							NULL,				NULL,				1 << 4,				0,					-1},
 	/* 6 (1 << 5) */
+	{	"Claws-mail",					NULL,				NULL,				1 << 5,				0,					-1},
 	/* 7 (1 << 6) */
 	{	"Gajim",							NULL,				NULL,				1 << 6,				0,					-1},
 	/* 9 (1 << 8) */
