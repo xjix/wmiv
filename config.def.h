@@ -42,7 +42,8 @@ static const Rule rules[] = {
 	/* 1 (1 << 0) */
 	{	"Electron",						NULL,				NULL,				1 << 0,				0,					-1},
 	/* 2 (1 << 1) */
-	{	"keepassxc",					NULL,				NULL,				1 << 1,				0,					-1},
+	{	"KeePassXC",					NULL,				NULL,				1 << 1,				0,					-1},
+	{	"Syncthing GTK",			NULL,				NULL,				1 << 1,				0,					-1},
 	/* 3 (1 << 2) */
 	{	"VirtualBox Machine",	NULL,				NULL,				1 << 2,				0,					-1},
 	{	"VirtualBox Manager",	NULL,				NULL,				1 << 2,				0,					-1},
@@ -54,6 +55,7 @@ static const Rule rules[] = {
 	{	"Claws-mail",					NULL,				NULL,				1 << 5,				0,					-1},
 	/* 7 (1 << 6) */
 	{	"Gajim",							NULL,				NULL,				1 << 6,				0,					-1},
+	{ "Dino",								NULL,				NULL,				1 << 6,				0,					-1},
 	/* 9 (1 << 8) */
 	{	"Chromium",						NULL,				NULL,				1 << 8,				0,					-1},
 };
