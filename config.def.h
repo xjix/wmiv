@@ -49,6 +49,7 @@ static const Rule rules[] = {
 	{	"VirtualBox Manager",	NULL,				NULL,				1 << 2,				0,					-1},
 	/* 4 (1 << 3) */
 	{	"Mumble",							NULL,				NULL,				1 << 3,				0,					-1},
+	{	"cantata",						NULL,				NULL,				1 << 3,				0,					-1},
 	/* 5 (1 << 4) */
 	{	"Steam",							NULL,				NULL,				1 << 4,				0,					-1},
 	/* 6 (1 << 5) */
@@ -58,6 +59,7 @@ static const Rule rules[] = {
 	{ "Dino",								NULL,				NULL,				1 << 6,				0,					-1},
 	/* 9 (1 << 8) */
 	{	"Chromium",						NULL,				NULL,				1 << 8,				0,					-1},
+	{	"firefox",						NULL,				NULL,				1 << 8,				0,					-1},
 };
 
 /* layout(s) */
