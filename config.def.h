@@ -35,31 +35,35 @@ static const char *tagsalt[] = {
 
 static const Rule rules[] = {
 	/* xprop(1):
-	 *	WM_CLASS(STRING) = instance, class
-	 *	WM_NAME(STRING) = title
-	 */
-	/* class								instance		title				tags mask			isfloating	monitor */
+	 * WM_CLASS(STRING) = instance, class
+	 * WM_NAME(STRING) = title
+	 *
+	 * class                instance    title       tags mask     isfloating  monitor */
 	/* 1 (1 << 0) */
-	{	"Electron",						NULL,				NULL,				1 << 0,				0,					-1},
+	{ "Electron",           NULL,         NULL,       1 << 0,       0,          -1},
 	/* 2 (1 << 1) */
-	{	"KeePassXC",					NULL,				NULL,				1 << 1,				0,					-1},
-	{	"Syncthing GTK",			NULL,				NULL,				1 << 1,				0,					-1},
+	{ "KeePassXC",          NULL,         NULL,       1 << 1,       0,          -1},
+	{ "Syncthing GTK",      NULL,         NULL,       1 << 1,       0,          -1},
 	/* 3 (1 << 2) */
-	{	"VirtualBox Machine",	NULL,				NULL,				1 << 2,				0,					-1},
-	{	"VirtualBox Manager",	NULL,				NULL,				1 << 2,				0,					-1},
+	{ "VirtualBox Machine", NULL,         NULL,       1 << 2,       0,          -1},
+	{ "VirtualBox Manager", NULL,         NULL,       1 << 2,       0,          -1},
 	/* 4 (1 << 3) */
-	{	"Mumble",							NULL,				NULL,				1 << 3,				0,					-1},
-	{	"cantata",						NULL,				NULL,				1 << 3,				0,					-1},
+	{ "cantata",            NULL,         NULL,       1 << 3,       0,          -1},
+	{ "Mumble",             NULL,         NULL,       1 << 3,       0,          -1},
+	{ "zoom",               NULL,         NULL,       1 << 3,       0,          -1},
+	{ "Wine",               "winamp.exe", NULL,       1 << 3,       0,          -1},
 	/* 5 (1 << 4) */
-	{	"Steam",							NULL,				NULL,				1 << 4,				0,					-1},
+	{ "Steam",              NULL,         NULL,       1 << 4,       0,          -1},
+	{ "launcher",           NULL,         NULL,       1 << 4,       0,          -1},
 	/* 6 (1 << 5) */
-	{	"Claws-mail",					NULL,				NULL,				1 << 5,				0,					-1},
+	{ "Claws-mail",         NULL,         NULL,       1 << 5,       0,          -1},
+	{ "Evolution",          NULL,         NULL,       1 << 5,       0,          -1},
 	/* 7 (1 << 6) */
-	{	"Gajim",							NULL,				NULL,				1 << 6,				0,					-1},
-	{ "Dino",								NULL,				NULL,				1 << 6,				0,					-1},
+	{ "Gajim",              NULL,         NULL,       1 << 6,       0,          -1},
+	{ "Dino",               NULL,         NULL,       1 << 6,       0,          -1},
 	/* 9 (1 << 8) */
-	{	"Chromium",						NULL,				NULL,				1 << 8,				0,					-1},
-	{	"firefox",						NULL,				NULL,				1 << 8,				0,					-1},
+	{ "Chromium",           NULL,         NULL,       1 << 8,       0,          -1},
+	{ "firefox",            NULL,         NULL,       1 << 8,       0,          -1},
 };
 
 /* layout(s) */
@@ -92,7 +96,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "xfce4-terminal", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
