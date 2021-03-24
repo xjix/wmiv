@@ -62,6 +62,7 @@ static const Rule rules[] = {
 	{ "Gajim",              NULL,         NULL,       1 << 6,       0,          -1},
 	{ "Dino",               NULL,         NULL,       1 << 6,       0,          -1},
 	{ "DeltaChat",          NULL,         NULL,       1 << 6,       0,          -1},
+	{ "Slack",              NULL,         NULL,       1 << 6,       0,          -1},
 	/* 9 (1 << 8) */
 	{ "Chromium",           NULL,         NULL,       1 << 8,       0,          -1},
 	{ "firefox",            NULL,         NULL,       1 << 8,       0,          -1},
